@@ -28,7 +28,9 @@ and a tests' Docker image.
 3. Create your module(s) in `pkg/modules`.
 4. Import your module(s) in `cmd/app/main.go`.
 
-## Testing
+## FAQ
+
+> How to test?
 
 First, run:
 
@@ -36,10 +38,20 @@ First, run:
 make tests
 ```
 
-Once your in the testing container, you have access to the following commands:
+Once the testing container is ready, you have access to the following commands:
 
 ```
-golint   Run the linter.
-gotest   Run the tests.
-gotodos  Display TODOs in your Go source.
+golint   Run the linter
+gotest   Run the tests
+gotodos  Display TODOs in your Go source
+```
+
+---
+
+> How to check the underlying Gotenberg's version?
+
+You may check the Docker image's label `version` with:
+
+```
+docker inspect $(DOCKER_REGISTRY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION)
 ```
