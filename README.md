@@ -48,7 +48,7 @@ gotodos  Display TODOs in your Go source
 
 > How can I check the underlying Gotenberg's version?
 
-The Gotenberg's image as a `version` label which contains the underlying Gotenberg's version:
+The Gotenberg's image has a `version` label which contains the underlying Gotenberg's version:
 
 ```
 docker inspect $(DOCKER_REGISTRY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION) | grep version
