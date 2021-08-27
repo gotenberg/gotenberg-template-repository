@@ -10,7 +10,7 @@ Update the following variables from the `Makefile`:
 * `APP_VERSION`
 * `APP_AUTHOR`
 * `APP_REPOSITORY`
-* `DOCKER_REGISTRY`
+* `DOCKER_REPOSITORY`
 
 Good 🤓? Now run:
 
@@ -18,7 +18,7 @@ Good 🤓? Now run:
 make it
 ```
 
-This command builds both your Gotenberg's Docker image variant (`$(DOCKER_REGISTRY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION)`)
+This command builds both your Gotenberg's Docker image variant (`$(DOCKER_REPOSITORY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION)`)
 and a tests' Docker image.
 
 ## Next steps
@@ -53,5 +53,5 @@ gotodos  Display TODOs in your Go source
 You may check the Docker image's label `version` with:
 
 ```
-docker inspect $(DOCKER_REGISTRY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION)
+docker inspect $(DOCKER_REPOSITORY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION)
 ```
