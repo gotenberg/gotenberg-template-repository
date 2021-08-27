@@ -4,7 +4,7 @@
 
 ## Quick Start
 
-Update the following variables from the `Makefile`:
+Update the following variables in the `Makefile`:
 
 * `APP_NAME` - the name of your Gotenberg's Docker image variant.
 * `APP_VERSION`
@@ -30,9 +30,7 @@ and a tests' Docker image.
 
 ## FAQ
 
-> How to test?
-
-First, run:
+> How can I run my tests?
 
 ```bash
 make tests
@@ -48,10 +46,16 @@ gotodos  Display TODOs in your Go source
 
 ---
 
-> How to check the underlying Gotenberg's version?
+> How can I check the underlying Gotenberg's version?
 
-You may check the Docker image's label `version` with:
+The Gotenberg's image has a `version` label which contains the underlying Gotenberg's version:
 
 ```
 docker inspect $(DOCKER_REPOSITORY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION)
 ```
+
+---
+
+> Where can I see the list of `Makefile` commands?
+
+Run `make help` to display the available commands 💡

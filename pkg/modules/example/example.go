@@ -42,6 +42,7 @@ func (mod *Example) Provision(ctx *gotenberg.Context) error {
 	return nil
 }
 
+// Validate validates the module properties.
 func (mod Example) Validate() error {
 	var err error
 

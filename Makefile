@@ -11,7 +11,7 @@ APP_VERSION=snapshot
 APP_AUTHOR=app-author
 APP_REPOSITORY=https://my.app.git
 DOCKER_REPOSITORY=app
-GOLANGCI_LINT_VERSION=v1.39.0 # See https://github.com/golangci/golangci-lint/releases.
+GOLANGCI_LINT_VERSION=v1.42.0 # See https://github.com/golangci/golangci-lint/releases.
 
 .PHONY: build
 build: ## Build the Gotenberg's Docker image
