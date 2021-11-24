@@ -5,7 +5,7 @@ module github.com/gotenberg/gotenberg-template-repository
 go 1.17
 
 require (
-	github.com/gotenberg/gotenberg/v7 v7.2.0
+	github.com/gotenberg/gotenberg/v7 v7.3.0
 	github.com/spf13/pflag v1.0.5
 	go.uber.org/multierr v1.7.0
 )
@@ -37,7 +37,7 @@ require (
 	github.com/labstack/echo/v4 v4.6.1 // indirect
 	github.com/labstack/gommon v0.3.1 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
-	github.com/mattn/go-colorable v0.1.11 // indirect
+	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/mholt/archiver/v3 v3.5.1 // indirect
