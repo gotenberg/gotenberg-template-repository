@@ -5,7 +5,7 @@ module github.com/gotenberg/gotenberg-template-repository
 go 1.17
 
 require (
-	github.com/gotenberg/gotenberg/v7 v7.3.0
+	github.com/gotenberg/gotenberg/v7 v7.4.0
 	github.com/spf13/pflag v1.0.5
 	go.uber.org/multierr v1.7.0
 )
@@ -16,8 +16,8 @@ require (
 	github.com/aymerick/douceur v0.2.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
-	github.com/chromedp/cdproto v0.0.0-20211112223831-e508c7bf6446 // indirect
-	github.com/chromedp/chromedp v0.7.4 // indirect
+	github.com/chromedp/cdproto v0.0.0-20211205231339-d2673e93eee4 // indirect
+	github.com/chromedp/chromedp v0.7.6 // indirect
 	github.com/chromedp/sysutil v1.0.0 // indirect
 	github.com/dsnet/compress v0.0.2-0.20210315054119-f66993602bf5 // indirect
 	github.com/gobwas/httphead v0.1.0 // indirect
@@ -44,7 +44,7 @@ require (
 	github.com/microcosm-cc/bluemonday v1.0.16 // indirect
 	github.com/nwaples/rardecode v1.1.2 // indirect
 	github.com/pdfcpu/pdfcpu v0.3.12 // indirect
-	github.com/pierrec/lz4/v4 v4.1.11 // indirect
+	github.com/pierrec/lz4/v4 v4.1.12 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/prometheus/client_golang v1.11.0 // indirect
 	github.com/prometheus/client_model v0.2.0 // indirect
@@ -61,7 +61,7 @@ require (
 	golang.org/x/image v0.0.0-20211028202545-6944b10bf410 // indirect
 	golang.org/x/net v0.0.0-20210913180222-943fd674d43e // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
-	golang.org/x/sys v0.0.0-20211103235746-7861aae1554b // indirect
+	golang.org/x/sys v0.0.0-20211124211545-fe61309f8881 // indirect
 	golang.org/x/term v0.0.0-20210615171337-6886f2dfbf5b // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
