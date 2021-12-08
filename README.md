@@ -24,7 +24,7 @@ and a tests' Docker image.
 ## Next steps
 
 1. Update the `go.mod` file with your Go module's name.
-2. Update the `build/Docker` with your instructions.
+2. Update the `build/Dockerfile` with your instructions.
 3. Create your module(s) in `pkg/modules`.
 4. Import your module(s) in `cmd/app/main.go`.
 
