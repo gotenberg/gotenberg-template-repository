@@ -155,8 +155,8 @@ github.com/googleapis/gax-go/v2 v2.0.4/go.mod h1:0Wqv26UfaUD9n4G6kQubkQ+KchISgw+
 github.com/googleapis/gax-go/v2 v2.0.5/go.mod h1:DWXyrwAJ9X0FpwwEdw+IPEYBICEFu5mhpdKc/us6bOk=
 github.com/gorilla/css v1.0.0 h1:BQqNyPTi50JCFMTw/b67hByjMVXZRwGha6wxVGkeihY=
 github.com/gorilla/css v1.0.0/go.mod h1:Dn721qIggHpt4+EFCcTLTU/vk5ySda2ReITrtgBl60c=
-github.com/gotenberg/gotenberg/v7 v7.4.0 h1:u628HzGcy5BjSMCtBn6DrDz3+MmOVUbrWslzTzJSbV8=
-github.com/gotenberg/gotenberg/v7 v7.4.0/go.mod h1:db/3ylPem0ysj+LyEXx4QD0s7sM8Z15cUQeQGxJgG04=
+github.com/gotenberg/gotenberg/v7 v7.4.1 h1:qk5y6UZFV1BTdJIJ3I/8hjZVNnxT5dvedQLB0I/1ypg=
+github.com/gotenberg/gotenberg/v7 v7.4.1/go.mod h1:db/3ylPem0ysj+LyEXx4QD0s7sM8Z15cUQeQGxJgG04=
 github.com/hashicorp/go-cleanhttp v0.5.1/go.mod h1:JpRdi6/HCYpAwUzNwuwqhbovhLtngrth3wmdIIUrZ80=
 github.com/hashicorp/go-cleanhttp v0.5.2 h1:035FKYIWjmULyFRBKPs8TBQoi0x6d9G4xc9neXJWAZQ=
 github.com/hashicorp/go-cleanhttp v0.5.2/go.mod h1:kO/YDlP8L1346E6Sodw+PrpBSV4/SoxCXGY6BqNFT48=
