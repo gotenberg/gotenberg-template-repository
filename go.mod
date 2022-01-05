@@ -5,7 +5,7 @@ module github.com/gotenberg/gotenberg-template-repository
 go 1.17
 
 require (
-	github.com/gotenberg/gotenberg/v7 v7.4.1
+	github.com/gotenberg/gotenberg/v7 v7.4.2
 	github.com/spf13/pflag v1.0.5
 	go.uber.org/multierr v1.7.0
 )
@@ -16,7 +16,7 @@ require (
 	github.com/aymerick/douceur v0.2.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
-	github.com/chromedp/cdproto v0.0.0-20211205231339-d2673e93eee4 // indirect
+	github.com/chromedp/cdproto v0.0.0-20211226214557-5a9a0564ad26 // indirect
 	github.com/chromedp/chromedp v0.7.6 // indirect
 	github.com/chromedp/sysutil v1.0.0 // indirect
 	github.com/dsnet/compress v0.0.2-0.20210315054119-f66993602bf5 // indirect
@@ -41,7 +41,7 @@ require (
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/mholt/archiver/v3 v3.5.1 // indirect
-	github.com/microcosm-cc/bluemonday v1.0.16 // indirect
+	github.com/microcosm-cc/bluemonday v1.0.17 // indirect
 	github.com/nwaples/rardecode v1.1.2 // indirect
 	github.com/pdfcpu/pdfcpu v0.3.12 // indirect
 	github.com/pierrec/lz4/v4 v4.1.12 // indirect
@@ -56,7 +56,7 @@ require (
 	github.com/valyala/fasttemplate v1.2.1 // indirect
 	github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
-	go.uber.org/zap v1.19.1 // indirect
+	go.uber.org/zap v1.20.0 // indirect
 	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5 // indirect
 	golang.org/x/image v0.0.0-20211028202545-6944b10bf410 // indirect
 	golang.org/x/net v0.0.0-20210913180222-943fd674d43e // indirect
