@@ -5,7 +5,7 @@ module github.com/gotenberg/gotenberg-template-repository
 go 1.18
 
 require (
-	github.com/gotenberg/gotenberg/v7 v7.5.1
+	github.com/gotenberg/gotenberg/v7 v7.5.2
 	github.com/spf13/pflag v1.0.5
 	go.uber.org/multierr v1.8.0
 )
@@ -64,6 +64,6 @@ require (
 	golang.org/x/sys v0.0.0-20220319134239-a9b59b0215f8 // indirect
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
 	golang.org/x/text v0.3.7 // indirect
-	google.golang.org/protobuf v1.27.1 // indirect
+	google.golang.org/protobuf v1.28.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
