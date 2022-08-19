@@ -4,7 +4,7 @@ ARG APP_NAME
 ARG APP_VERSION
 ARG GOLANGCI_LINT_VERSION
 
-FROM golang:$GOLANG_VERSION-stretch as golang
+FROM golang:$GOLANG_VERSION-bullseye as golang
 
 # We're extending the Gotenberg's Docker image because our code relies on external
 # dependencies like Google Chrome, LibreOffice, etc.
