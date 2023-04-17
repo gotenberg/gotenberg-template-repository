@@ -1,7 +1,7 @@
 package example
 
 import (
-	"fmt"
+	"errors"
 
 	"github.com/gotenberg/gotenberg/v7/pkg/gotenberg"
 	flag "github.com/spf13/pflag"
@@ -47,19 +47,26 @@ func (mod Example) Validate() error {
 	var err error
 
 	if mod.strProp == "bar" {
-		err = multierr.Append(err, fmt.Errorf("str prop must be different than bar"))
+		err = multierr.Append(err, errors.New("str prop must be different than bar"))
 	}
 
 	if mod.intProp == 1337 {
-		err = multierr.Append(err, fmt.Errorf("int prop must be different than 1337"))
+		err = multierr.Append(err, errors.New("int prop must be different than 1337"))
 	}
 
 	return err
 }
 
+func (mod Example) SystemMessages() []string {
+	return []string{
+		"Hello world!",
+	}
+}
+
 // Interface guards.
 var (
-	_ gotenberg.Module      = (*Example)(nil)
-	_ gotenberg.Provisioner = (*Example)(nil)
-	_ gotenberg.Validator   = (*Example)(nil)
+	_ gotenberg.Module       = (*Example)(nil)
+	_ gotenberg.Provisioner  = (*Example)(nil)
+	_ gotenberg.Validator    = (*Example)(nil)
+	_ gotenberg.SystemLogger = (*Example)(nil)
 )
