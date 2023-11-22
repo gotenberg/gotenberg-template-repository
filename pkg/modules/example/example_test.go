@@ -8,7 +8,7 @@ import (
 )
 
 func TestExample_Descriptor(t *testing.T) {
-	descriptor := Example{}.Descriptor()
+	descriptor := new(Example).Descriptor()
 
 	actual := reflect.TypeOf(descriptor.New())
 	expect := reflect.TypeOf(new(Example))
@@ -19,11 +19,13 @@ func TestExample_Descriptor(t *testing.T) {
 }
 
 func TestExample_Provision(t *testing.T) {
-	for i, tc := range []struct {
-		ctx       *gotenberg.Context
-		expectErr bool
+	for _, tc := range []struct {
+		scenario    string
+		ctx         *gotenberg.Context
+		expectError bool
 	}{
 		{
+			scenario: "default flags",
 			ctx: func() *gotenberg.Context {
 				return gotenberg.NewContext(
 					gotenberg.ParsedFlags{
@@ -32,53 +34,65 @@ func TestExample_Provision(t *testing.T) {
 					[]gotenberg.ModuleDescriptor{},
 				)
 			}(),
+			expectError: false,
 		},
 	} {
-		mod := new(Example)
-		err := mod.Provision(tc.ctx)
+		t.Run(tc.scenario, func(t *testing.T) {
+			mod := new(Example)
+			err := mod.Provision(tc.ctx)
 
-		if tc.expectErr && err == nil {
-			t.Errorf("test %d: expected error but got: %v", i, err)
-		}
+			if tc.expectError && err == nil {
+				t.Fatal("expected error but got none")
+			}
 
-		if !tc.expectErr && err != nil {
-			t.Errorf("test %d: expected no error but got: %v", i, err)
-		}
+			if !tc.expectError && err != nil {
+				t.Fatalf("expected no error but got: %v", err)
+			}
+		})
 	}
 }
 
 func TestExample_Validate(t *testing.T) {
-	for i, tc := range []struct {
-		strProp   string
-		intProp   int
-		expectErr bool
+	for _, tc := range []struct {
+		scenario    string
+		strProp     string
+		intProp     int
+		expectError bool
 	}{
 		{
-			strProp:   "bar",
-			expectErr: true,
+			scenario:    "invalid strProp",
+			strProp:     "bar",
+			intProp:     1,
+			expectError: true,
 		},
 		{
-			intProp:   1337,
-			expectErr: true,
+			scenario:    "invalid intProp",
+			strProp:     "foo",
+			intProp:     1337,
+			expectError: true,
 		},
 		{
-			strProp: "foo",
-			intProp: 10,
+			scenario:    "successful validation",
+			strProp:     "foo",
+			intProp:     10,
+			expectError: false,
 		},
 	} {
-		mod := Example{
-			strProp: tc.strProp,
-			intProp: tc.intProp,
-		}
+		t.Run(tc.scenario, func(t *testing.T) {
+			mod := &Example{
+				strProp: tc.strProp,
+				intProp: tc.intProp,
+			}
 
-		err := mod.Validate()
+			err := mod.Validate()
 
-		if tc.expectErr && err == nil {
-			t.Errorf("test %d: expected error but got: %v", i, err)
-		}
+			if tc.expectError && err == nil {
+				t.Fatal("expected error but got none")
+			}
 
-		if !tc.expectErr && err != nil {
-			t.Errorf("test %d: expected no error but got: %v", i, err)
-		}
+			if !tc.expectError && err != nil {
+				t.Fatalf("expected no error but got: %v", err)
+			}
+		})
 	}
 }

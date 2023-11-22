@@ -49,7 +49,11 @@ tests-once: ## Run the tests once (prefer the "tests" command while developing)
 	$(DOCKER_REPOSITORY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION)-tests \
 	gotest
 
+# go install mvdan.cc/gofumpt@latest
+# go install github.com/daixiang0/gci@latest
 .PHONY: fmt
 fmt: ## Format the code and "optimize" the dependencies
-	go fmt ./...
+	gofumpt -l -w .
+	# TODO: change github.com/gotenberg/gotenberg-template-repository to actual namespace.
+	gci write -s standard -s default -s "prefix(github.com/gotenberg/gotenberg/v7)" -s "prefix(github.com/gotenberg/gotenberg-template-repository)" --skip-generated --skip-vendor --custom-order .
 	go mod tidy

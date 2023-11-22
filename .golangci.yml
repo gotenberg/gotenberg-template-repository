@@ -1,10 +1,22 @@
+linters-settings:
+  gci:
+    sections:
+      - standard
+      - default
+      - prefix(github.com/gotenberg/gotenberg/v7)
+      # TODO: change namespace.
+      - prefix(github.com/gotenberg/gotenberg-template-repository)
+    skip-generated: true
+    skip-vendor: true
+    custom-order: true
+
 linters:
   disable-all: true
   enable:
     - bodyclose
     - errcheck
-    - gofmt
-    - goimports
+    - gci
+    - gofumpt
     - gosec
     - gosimple
     - govet

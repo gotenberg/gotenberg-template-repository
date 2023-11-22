@@ -3,13 +3,14 @@ package example
 import (
 	"errors"
 
-	"github.com/gotenberg/gotenberg/v7/pkg/gotenberg"
 	flag "github.com/spf13/pflag"
 	"go.uber.org/multierr"
+
+	"github.com/gotenberg/gotenberg/v7/pkg/gotenberg"
 )
 
 func init() {
-	gotenberg.MustRegisterModule(Example{})
+	gotenberg.MustRegisterModule(new(Example))
 }
 
 // Example is our module. It does nothing.
@@ -18,8 +19,8 @@ type Example struct {
 	intProp int
 }
 
-// Descriptor returns an Example's module descriptor.
-func (mod Example) Descriptor() gotenberg.ModuleDescriptor {
+// Descriptor returns an [Example]'s module descriptor.
+func (ex *Example) Descriptor() gotenberg.ModuleDescriptor {
 	return gotenberg.ModuleDescriptor{
 		ID: "example",
 		FlagSet: func() *flag.FlagSet {
@@ -34,30 +35,30 @@ func (mod Example) Descriptor() gotenberg.ModuleDescriptor {
 }
 
 // Provision sets the module properties.
-func (mod *Example) Provision(ctx *gotenberg.Context) error {
+func (ex *Example) Provision(ctx *gotenberg.Context) error {
 	flags := ctx.ParsedFlags()
-	mod.strProp = flags.MustString("example-str-prop")
-	mod.intProp = flags.MustInt("example-int-prop")
+	ex.strProp = flags.MustString("example-str-prop")
+	ex.intProp = flags.MustInt("example-int-prop")
 
 	return nil
 }
 
 // Validate validates the module properties.
-func (mod Example) Validate() error {
+func (ex *Example) Validate() error {
 	var err error
 
-	if mod.strProp == "bar" {
+	if ex.strProp == "bar" {
 		err = multierr.Append(err, errors.New("str prop must be different than bar"))
 	}
 
-	if mod.intProp == 1337 {
+	if ex.intProp == 1337 {
 		err = multierr.Append(err, errors.New("int prop must be different than 1337"))
 	}
 
 	return err
 }
 
-func (mod Example) SystemMessages() []string {
+func (ex *Example) SystemMessages() []string {
 	return []string{
 		"Hello world!",
 	}

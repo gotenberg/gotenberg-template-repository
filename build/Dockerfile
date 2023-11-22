@@ -30,10 +30,11 @@ ARG APP_REPOSITORY
 ARG APP_NAME
 ARG APP_VERSION
 
-LABEL variant.author="$APP_AUTHOR" \
-      variant.name="$APP_NAME" \
-      variant.repository="$APP_REPOSITORY" \
-      variant.version="$APP_VERSION"
+LABEL org.opencontainers.image.title="Gotenberg $APP_NAME" \
+      org.opencontainers.image.description="A Docker-powered stateless API for PDF files." \
+      org.opencontainers.image.version="$GOTENBERG_VERSION-$APP_VERSION" \
+      org.opencontainers.image.authors="$APP_AUTHOR" \
+      org.opencontainers.image.source="$APP_REPOSITORY"
 
 USER root
 

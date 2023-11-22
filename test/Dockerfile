@@ -38,7 +38,9 @@ RUN apt-get update -qq &&\
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&\
     # We cannot use $PATH in the next command (print $PATH instead of the environment variable value).
     sed -i 's#/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin#/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/go/bin:/usr/local/go/bin#g' /etc/sudoers &&\
-    curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin $GOLANGCI_LINT_VERSION
+    curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin $GOLANGCI_LINT_VERSION &&\
+    go install mvdan.cc/gofumpt@latest &&\
+    go install github.com/daixiang0/gci@latest
 
 # Pristine working directory.
 WORKDIR /tests
