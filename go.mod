@@ -5,7 +5,7 @@ module github.com/gotenberg/gotenberg-template-repository
 go 1.21
 
 require (
-	github.com/gotenberg/gotenberg/v7 v7.10.0
+	github.com/gotenberg/gotenberg/v7 v7.10.1
 	github.com/spf13/pflag v1.0.5
 	go.uber.org/multierr v1.11.0
 )
