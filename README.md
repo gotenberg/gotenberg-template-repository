@@ -18,7 +18,7 @@ Good 🤓? Now run:
 make it
 ```
 
-This command builds both your Gotenberg's Docker image variant (`$(DOCKER_REPOSITORY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION)`)
+This command builds both your Gotenberg's Docker image variant (`$(DOCKER_REPOSITORY)/gotenberg:8-$(APP_NAME)-$(APP_VERSION)`)
 and a tests' Docker image.
 
 ## Next steps
@@ -51,7 +51,7 @@ gotodos  Display TODOs in your Go source
 The Gotenberg's image has a `version` label which contains the underlying Gotenberg's version:
 
 ```
-docker inspect $(DOCKER_REPOSITORY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION)
+docker inspect $(DOCKER_REPOSITORY)/gotenberg:8-$(APP_NAME)-$(APP_VERSION)
 ```
 
 ---

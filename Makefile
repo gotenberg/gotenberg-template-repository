@@ -21,7 +21,7 @@ build: ## Build the Gotenberg's Docker image
 	--build-arg APP_VERSION=$(APP_VERSION) \
 	--build-arg APP_AUTHOR=$(APP_AUTHOR) \
 	--build-arg APP_REPOSITORY=$(APP_REPOSITORY) \
-	-t $(DOCKER_REPOSITORY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION) \
+	-t $(DOCKER_REPOSITORY)/gotenberg:8-$(APP_NAME)-$(APP_VERSION) \
 	-f build/Dockerfile .
 
 .PHONY: build-tests
@@ -32,21 +32,21 @@ build-tests: ## Build the tests' Docker image
 	--build-arg APP_NAME=$(APP_NAME) \
 	--build-arg APP_VERSION=$(APP_VERSION) \
 	--build-arg GOLANGCI_LINT_VERSION=$(GOLANGCI_LINT_VERSION) \
-	-t $(DOCKER_REPOSITORY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION)-tests \
+	-t $(DOCKER_REPOSITORY)/gotenberg:8-$(APP_NAME)-$(APP_VERSION)-tests \
 	-f test/Dockerfile .
 
 .PHONY: tests
 tests: ## Start the testing environment
 	docker run --rm -it \
 	-v $(PWD):/tests \
-	$(DOCKER_REPOSITORY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION)-tests \
+	$(DOCKER_REPOSITORY)/gotenberg:8-$(APP_NAME)-$(APP_VERSION)-tests \
 	bash
 
 .PHONY: tests-once
 tests-once: ## Run the tests once (prefer the "tests" command while developing)
 	docker run --rm  \
 	-v $(PWD):/tests \
-	$(DOCKER_REPOSITORY)/gotenberg:7-$(APP_NAME)-$(APP_VERSION)-tests \
+	$(DOCKER_REPOSITORY)/gotenberg:8-$(APP_NAME)-$(APP_VERSION)-tests \
 	gotest
 
 # go install mvdan.cc/gofumpt@latest
@@ -55,5 +55,5 @@ tests-once: ## Run the tests once (prefer the "tests" command while developing)
 fmt: ## Format the code and "optimize" the dependencies
 	gofumpt -l -w .
 	# TODO: change github.com/gotenberg/gotenberg-template-repository to actual namespace.
-	gci write -s standard -s default -s "prefix(github.com/gotenberg/gotenberg/v7)" -s "prefix(github.com/gotenberg/gotenberg-template-repository)" --skip-generated --skip-vendor --custom-order .
+	gci write -s standard -s default -s "prefix(github.com/gotenberg/gotenberg/v8)" -s "prefix(github.com/gotenberg/gotenberg-template-repository)" --skip-generated --skip-vendor --custom-order .
 	go mod tidy

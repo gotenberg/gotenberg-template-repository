@@ -3,7 +3,7 @@ linters-settings:
     sections:
       - standard
       - default
-      - prefix(github.com/gotenberg/gotenberg/v7)
+      - prefix(github.com/gotenberg/gotenberg/v8)
       # TODO: change namespace.
       - prefix(github.com/gotenberg/gotenberg-template-repository)
     skip-generated: true

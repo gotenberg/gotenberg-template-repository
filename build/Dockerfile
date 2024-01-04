@@ -21,9 +21,9 @@ COPY pkg ./pkg
 ARG APP_NAME
 ARG APP_VERSION
 
-RUN go build -o gotenberg -ldflags "-X 'github.com/gotenberg/gotenberg/v7/cmd.Version=7-$APP_NAME-$APP_VERSION'" cmd/app/main.go
+RUN go build -o gotenberg -ldflags "-X 'github.com/gotenberg/gotenberg/v8/cmd.Version=8-$APP_NAME-$APP_VERSION'" cmd/app/main.go
 
-FROM gotenberg/gotenberg:7
+FROM gotenberg/gotenberg:8
 
 ARG APP_AUTHOR
 ARG APP_REPOSITORY

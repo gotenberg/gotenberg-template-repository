@@ -6,7 +6,7 @@ import (
 	flag "github.com/spf13/pflag"
 	"go.uber.org/multierr"
 
-	"github.com/gotenberg/gotenberg/v7/pkg/gotenberg"
+	"github.com/gotenberg/gotenberg/v8/pkg/gotenberg"
 )
 
 func init() {
