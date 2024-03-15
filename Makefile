@@ -5,7 +5,7 @@ help: ## Show the help
 .PHONY: it
 it: build build-tests ## Initialize the development environment
 
-GOLANG_VERSION=1.21
+GOLANG_VERSION=1.22
 APP_NAME=app
 APP_VERSION=snapshot
 APP_AUTHOR=app-author
