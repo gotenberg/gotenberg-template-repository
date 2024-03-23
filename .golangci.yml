@@ -7,33 +7,55 @@ linters-settings:
       # TODO: change namespace.
       - prefix(github.com/gotenberg/gotenberg-template-repository)
     skip-generated: true
-    skip-vendor: true
     custom-order: true
 
 linters:
   disable-all: true
   enable:
+    - asasalint
+    - asciicheck
+    - bidichk
     - bodyclose
+    - decorder
+    - dogsled
+    - dupl
+    - dupword
+    - durationcheck
     - errcheck
+    - errname
+    - exhaustive
+    - exportloopref
     - gci
+    - gofmt
+    - goimports
     - gofumpt
     - gosec
     - gosimple
     - govet
     - ineffassign
+    - importas
     - misspell
     - prealloc
+    - promlinter
+    - sloglint
+    - sqlclosecheck
     - staticcheck
+    - tenv
+    - testableexamples
+    - testifylint
+    - tparallel
     - typecheck
     - unconvert
     - unused
+    - wastedassign
+    - whitespace
+    - zerologlint
 
 run:
-  deadline: 5m
+  timeout: 5m
   issues-exit-code: 1
   tests: false
 
 output:
-  format: 'colored-line-number'
   print-issued-lines: true
   print-linter-name: true
