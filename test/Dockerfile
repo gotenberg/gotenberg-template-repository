@@ -5,7 +5,7 @@ ARG APP_NAME
 ARG APP_VERSION
 ARG GOLANGCI_LINT_VERSION
 
-FROM golang:$GOLANG_VERSION-bullseye as golang
+FROM golang:$GOLANG_VERSION-bullseye AS golang
 
 # We're extending the Gotenberg's Docker image because our code relies on external
 # dependencies like Google Chrome, LibreOffice, etc.
@@ -19,9 +19,9 @@ COPY ./test/golint.sh /usr/bin/golint
 COPY ./test/gotest.sh /usr/bin/gotest
 COPY ./test/gotodos.sh /usr/bin/gotodos
 
-ENV GOPATH /go
-ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
-ENV CGO_ENABLED 1
+ENV GOPATH=/go
+ENV PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
+ENV CGO_ENABLED=1
 
 RUN apt-get update -qq &&\
     apt-get install -y -qq --no-install-recommends  \

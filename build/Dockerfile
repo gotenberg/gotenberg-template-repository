@@ -3,7 +3,7 @@ ARG GOTENBERG_VERSION
 
 FROM golang:$GOLANG_VERSION AS builder
 
-ENV CGO_ENABLED 0
+ENV CGO_ENABLED=0
 
 # Define the working directory outside of $GOPATH (we're using go modules).
 WORKDIR /home
