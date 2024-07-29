@@ -5,7 +5,7 @@ module github.com/gotenberg/gotenberg-template-repository
 go 1.22
 
 require (
-	github.com/gotenberg/gotenberg/v8 v8.8.1
+	github.com/gotenberg/gotenberg/v8 v8.9.0
 	github.com/spf13/pflag v1.0.5
 	go.uber.org/multierr v1.11.0
 )
@@ -17,7 +17,7 @@ require (
 	github.com/barasher/go-exiftool v1.10.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/chromedp/cdproto v0.0.0-20240709201219-e202069cc16b // indirect
+	github.com/chromedp/cdproto v0.0.0-20240721024200-dac8efcb39ce // indirect
 	github.com/chromedp/chromedp v0.9.5 // indirect
 	github.com/chromedp/sysutil v1.0.0 // indirect
 	github.com/dlclark/regexp2 v1.11.2 // indirect
@@ -41,7 +41,7 @@ require (
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
-	github.com/mattn/go-runewidth v0.0.15 // indirect
+	github.com/mattn/go-runewidth v0.0.16 // indirect
 	github.com/mholt/archiver/v3 v3.5.1 // indirect
 	github.com/microcosm-cc/bluemonday v1.0.27 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
