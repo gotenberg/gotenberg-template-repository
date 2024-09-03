@@ -5,14 +5,14 @@ help: ## Show the help
 .PHONY: it
 it: build build-tests ## Initialize the development environment
 
-GOLANG_VERSION=1.22
-GOTENBERG_VERSION=8.9.1
+GOLANG_VERSION=1.23
+GOTENBERG_VERSION=8.9.2
 APP_NAME=app
 APP_VERSION=snapshot
 APP_AUTHOR=app-author
 APP_REPOSITORY=https://my.app.git
 DOCKER_REPOSITORY=app
-GOLANGCI_LINT_VERSION=v1.59.0 # See https://github.com/golangci/golangci-lint/releases.
+GOLANGCI_LINT_VERSION=v1.60.3 # See https://github.com/golangci/golangci-lint/releases.
 
 .PHONY: build
 build: ## Build the Gotenberg's Docker image
