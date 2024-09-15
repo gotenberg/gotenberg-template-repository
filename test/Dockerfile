@@ -1,4 +1,5 @@
 ARG GOLANG_VERSION
+ARG DOCKER_REGISTRY
 ARG DOCKER_REPOSITORY
 ARG GOTENBERG_VERSION
 ARG APP_NAME
@@ -9,7 +10,7 @@ FROM golang:$GOLANG_VERSION-bullseye AS golang
 
 # We're extending the Gotenberg's Docker image because our code relies on external
 # dependencies like Google Chrome, LibreOffice, etc.
-FROM $DOCKER_REPOSITORY/gotenberg:$GOTENBERG_VERSION-$APP_NAME-$APP_VERSION
+FROM $DOCKER_REGISTRY/$DOCKER_REPOSITORY:$GOTENBERG_VERSION-$APP_NAME-$APP_VERSION
 
 USER root
 
