@@ -5,7 +5,7 @@ module github.com/gotenberg/gotenberg-template-repository
 go 1.23.0
 
 require (
-	github.com/gotenberg/gotenberg/v8 v8.10.0
+	github.com/gotenberg/gotenberg/v8 v8.11.0
 	github.com/spf13/pflag v1.0.5
 	go.uber.org/multierr v1.11.0
 )
@@ -34,7 +34,7 @@ require (
 	github.com/hhrutter/lzw v1.0.0 // indirect
 	github.com/hhrutter/tiff v1.0.1 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
-	github.com/klauspost/compress v1.17.9 // indirect
+	github.com/klauspost/compress v1.17.10 // indirect
 	github.com/klauspost/pgzip v1.2.6 // indirect
 	github.com/labstack/echo/v4 v4.12.0 // indirect
 	github.com/labstack/gommon v0.4.2 // indirect
