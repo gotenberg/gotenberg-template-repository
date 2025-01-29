@@ -19,29 +19,33 @@ jobs:
         with:
           go-version: '1.23'
           cache: false
+
       - name: Checkout source code
         uses: actions/checkout@v4
+
       - name: Run linters
         uses: golangci/golangci-lint-action@v6
         with:
-          version: v1.61.0
+          version: v1.63.4
 
   tests:
     needs:
       - lint
     name: Tests
-    # TODO: once arm64 actions are available, also run the tests on this architecture.
-    # See: https://github.com/actions/virtual-environments/issues/2552#issuecomment-771478000.
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+
       - name: Checkout source code
         uses: actions/checkout@v4
+
       - name: Build testing environment
         run: make build build-tests
+
       - name: Run tests
         run: |
           make tests-once

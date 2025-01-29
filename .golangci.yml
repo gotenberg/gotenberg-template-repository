@@ -8,10 +8,6 @@ linters-settings:
       - prefix(github.com/gotenberg/gotenberg-template-repository)
     skip-generated: true
     custom-order: true
-  # Until https://github.com/securego/gosec/issues/1187 is resolved.
-  gosec:
-    excludes:
-      - G115
 
 linters:
   disable-all: true
