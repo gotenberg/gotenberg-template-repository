@@ -6,7 +6,7 @@ help: ## Show the help
 it: build build-tests ## Initialize the development environment
 
 GOLANG_VERSION=1.24
-GOTENBERG_VERSION=8.17.2
+GOTENBERG_VERSION=8.17.3
 APP_NAME=app
 APP_VERSION=snapshot
 APP_AUTHOR=app-author

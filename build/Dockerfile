@@ -34,7 +34,7 @@ ARG APP_NAME
 ARG APP_VERSION
 
 LABEL org.opencontainers.image.title="Gotenberg $APP_NAME" \
-      org.opencontainers.image.description="A Docker-powered stateless API for PDF files." \
+      org.opencontainers.image.description="A containerized API for seamless PDF conversion." \
       org.opencontainers.image.version="$GOTENBERG_VERSION-$APP_NAME-$APP_VERSION" \
       org.opencontainers.image.authors="$APP_AUTHOR" \
       org.opencontainers.image.source="$APP_REPOSITORY"
