@@ -13,7 +13,7 @@ Update the following variables in the `Makefile`:
 * `DOCKER_REGISTRY`
 * `DOCKER_REPOSITORY`
 
-Good 🤓? Now run:
+You may now run:
 
 ```bash
 make it
@@ -30,22 +30,6 @@ and a tests' Docker image.
 4. Import your module(s) in `cmd/app/main.go`.
 
 ## FAQ
-
-> How can I run my tests?
-
-```bash
-make tests
-```
-
-Once the testing container is ready, you have access to the following commands:
-
-```
-golint   Run the linter
-gotest   Run the tests
-gotodos  Display TODOs in your Go source
-```
-
----
 
 > How can I check the underlying Gotenberg's version?
 
