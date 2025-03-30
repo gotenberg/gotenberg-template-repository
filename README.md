@@ -16,11 +16,10 @@ Update the following variables in the `Makefile`:
 You may now run:
 
 ```bash
-make it
+make build
 ```
 
-This command builds both your Gotenberg's Docker image variant (`$(DOCKER_REGISTRY)/$(DOCKER_REPOSITORY):$(GOTENBERG_VERSION)-$(APP_NAME)-$(APP_VERSION)`)
-and a tests' Docker image.
+This command builds your Gotenberg's Docker image (`$(DOCKER_REGISTRY)/$(DOCKER_REPOSITORY):$(GOTENBERG_VERSION)-$(APP_NAME)-$(APP_VERSION)`).
 
 ## Next steps
 
