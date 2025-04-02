@@ -5,7 +5,7 @@ module github.com/gotenberg/gotenberg-template-repository
 go 1.24.0
 
 require (
-	github.com/gotenberg/gotenberg/v8 v8.19.0
+	github.com/gotenberg/gotenberg/v8 v8.19.1
 	github.com/spf13/pflag v1.0.6
 	go.uber.org/multierr v1.11.0
 )
@@ -21,8 +21,8 @@ require (
 	github.com/bodgit/sevenzip v1.6.0 // indirect
 	github.com/bodgit/windows v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/chromedp/cdproto v0.0.0-20250319231242-a755498943c8 // indirect
-	github.com/chromedp/chromedp v0.13.3 // indirect
+	github.com/chromedp/cdproto v0.0.0-20250401205909-91afd104e2b8 // indirect
+	github.com/chromedp/chromedp v0.13.5 // indirect
 	github.com/chromedp/sysutil v1.1.0 // indirect
 	github.com/dlclark/regexp2 v1.11.5 // indirect
 	github.com/dsnet/compress v0.0.2-0.20230904184137-39efe44ab707 // indirect
@@ -57,7 +57,7 @@ require (
 	github.com/prometheus/common v0.63.0 // indirect
 	github.com/prometheus/procfs v0.16.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
-	github.com/shirou/gopsutil/v4 v4.25.2 // indirect
+	github.com/shirou/gopsutil/v4 v4.25.3 // indirect
 	github.com/sorairolake/lzip-go v0.3.7 // indirect
 	github.com/therootcompany/xz v1.0.1 // indirect
 	github.com/tklauser/go-sysconf v0.3.15 // indirect
