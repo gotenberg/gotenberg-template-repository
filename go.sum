@@ -107,8 +107,8 @@ github.com/googleapis/gax-go/v2 v2.0.4/go.mod h1:0Wqv26UfaUD9n4G6kQubkQ+KchISgw+
 github.com/googleapis/gax-go/v2 v2.0.5/go.mod h1:DWXyrwAJ9X0FpwwEdw+IPEYBICEFu5mhpdKc/us6bOk=
 github.com/gorilla/css v1.0.1 h1:ntNaBIghp6JmvWnxbZKANoLyuXTPZ4cAMlo6RyhlbO8=
 github.com/gorilla/css v1.0.1/go.mod h1:BvnYkspnSzMmwRK+b8/xgNPLiIuNZr6vbZBTPQ2A3b0=
-github.com/gotenberg/gotenberg/v8 v8.20.0 h1:BJ/mRp4DFdnrdeqyHDZs/e/SVNbfMMIYkztXB5h/fcQ=
-github.com/gotenberg/gotenberg/v8 v8.20.0/go.mod h1:47aMQA+mMrWrBV6LopcCW4egPN0E94N5euJQQE6yURU=
+github.com/gotenberg/gotenberg/v8 v8.20.1 h1:rNJoG40DSH94/zZpewzBHpsYv1ULiByayuz2x1dxODY=
+github.com/gotenberg/gotenberg/v8 v8.20.1/go.mod h1:47aMQA+mMrWrBV6LopcCW4egPN0E94N5euJQQE6yURU=
 github.com/hashicorp/errwrap v1.0.0/go.mod h1:YH+1FKiLXxHSkmPseP+kNlulaMuP3n2brvKWEqk/Jc4=
 github.com/hashicorp/errwrap v1.1.0 h1:OxrOeh75EUXMY8TBjag2fzXGZ40LB6IKw45YeGUDY2I=
 github.com/hashicorp/errwrap v1.1.0/go.mod h1:YH+1FKiLXxHSkmPseP+kNlulaMuP3n2brvKWEqk/Jc4=
