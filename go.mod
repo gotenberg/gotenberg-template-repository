@@ -6,7 +6,7 @@ go 1.24.0
 
 require (
 	github.com/gotenberg/gotenberg/v8 v8.21.1
-	github.com/spf13/pflag v1.0.6
+	github.com/spf13/pflag v1.0.7
 	go.uber.org/multierr v1.11.0
 )
 
@@ -34,9 +34,7 @@ require (
 	github.com/gobwas/ws v1.4.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/gorilla/css v1.0.1 // indirect
-	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
-	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/hashicorp/go-retryablehttp v0.7.7 // indirect
 	github.com/hashicorp/golang-lru/v2 v2.0.7 // indirect
 	github.com/klauspost/compress v1.18.0 // indirect
