@@ -5,7 +5,7 @@ module github.com/gotenberg/gotenberg-template-repository
 go 1.25.0
 
 require (
-	github.com/gotenberg/gotenberg/v8 v8.23.1
+	github.com/gotenberg/gotenberg/v8 v8.23.2
 	github.com/spf13/pflag v1.0.10
 	go.uber.org/multierr v1.11.0
 )
@@ -26,7 +26,7 @@ require (
 	github.com/chromedp/sysutil v1.1.0 // indirect
 	github.com/dlclark/regexp2 v1.11.5 // indirect
 	github.com/dsnet/compress v0.0.2-0.20230904184137-39efe44ab707 // indirect
-	github.com/ebitengine/purego v0.8.4 // indirect
+	github.com/ebitengine/purego v0.9.0 // indirect
 	github.com/go-json-experiment/json v0.0.0-20250910080747-cc2cfa0554c3 // indirect
 	github.com/go-ole/go-ole v1.3.0 // indirect
 	github.com/gobwas/httphead v0.1.0 // indirect
