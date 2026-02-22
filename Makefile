@@ -2,8 +2,8 @@
 help: ## Show the help
 	@grep -hE '^[A-Za-z0-9_ \-]*?:.*##.*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-GOLANG_VERSION=1.25.5
-GOTENBERG_VERSION=8.26.0
+GOLANG_VERSION=1.26.0
+GOTENBERG_VERSION=8.27.0
 APP_NAME=app
 APP_VERSION=snapshot
 APP_AUTHOR=app-author
@@ -29,5 +29,6 @@ lint: ## Lint Golang codebase
 
 .PHONY: fmt
 fmt: ## Format Golang codebase and "optimize" the dependencies
+	go fix ./...
 	golangci-lint fmt
 	go mod tidy

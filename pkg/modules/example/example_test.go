@@ -11,7 +11,7 @@ func TestExample_Descriptor(t *testing.T) {
 	descriptor := new(Example).Descriptor()
 
 	actual := reflect.TypeOf(descriptor.New())
-	expect := reflect.TypeOf(new(Example))
+	expect := reflect.TypeFor[*Example]()
 
 	if actual != expect {
 		t.Errorf("expected '%s' but got '%s'", expect, actual)
