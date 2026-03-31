@@ -1,38 +1,38 @@
-> Use this GitHub template repository for your custom modules and Gotenberg's Docker image variants.
+> GitHub template repository for building custom modules and Gotenberg Docker image variants.
 > 
-> Want to share your work? Open a PR to the [awesome list](https://github.com/gotenberg/awesome-gotenberg)! 🚀
+> Built something cool? Open a PR to the [awesome list](https://github.com/gotenberg/awesome-gotenberg)! 🚀
 
 ## Quick Start
 
-Update the following variables in the `Makefile`:
+Set these variables in the `Makefile`:
 
-* `APP_NAME` - the name of your Gotenberg's Docker image variant.
+* `APP_NAME`: your Gotenberg Docker image variant name.
 * `APP_VERSION`
 * `APP_AUTHOR`
 * `APP_REPOSITORY`
 * `DOCKER_REGISTRY`
 * `DOCKER_REPOSITORY`
 
-You may now run:
+Then build:
 
 ```bash
 make build
 ```
 
-This command builds your Gotenberg's Docker image (`$(DOCKER_REGISTRY)/$(DOCKER_REPOSITORY):$(GOTENBERG_VERSION)-$(APP_NAME)-$(APP_VERSION)`).
+Produces a Docker image tagged `$(DOCKER_REGISTRY)/$(DOCKER_REPOSITORY):$(GOTENBERG_VERSION)-$(APP_NAME)-$(APP_VERSION)`.
 
-## Next steps
+## Next Steps
 
-1. Update the `go.mod` file with your Go module's name.
-2. Update the `build/Dockerfile` with your instructions.
+1. Rename the Go module in `go.mod`.
+2. Add your instructions to `build/Dockerfile`.
 3. Create your module(s) in `pkg/modules`.
 4. Import your module(s) in `cmd/app/main.go`.
 
 ## FAQ
 
-> How can I check the underlying Gotenberg's version?
+> How do I check the underlying Gotenberg version?
 
-The Gotenberg's image has a `version` label which contains the underlying Gotenberg's version:
+Inspect the `version` label on the image:
 
 ```
 docker inspect $(DOCKER_REGISTRY)/$(DOCKER_REPOSITORY):$(GOTENBERG_VERSION)-$(APP_NAME)-$(APP_VERSION)
@@ -40,6 +40,6 @@ docker inspect $(DOCKER_REGISTRY)/$(DOCKER_REPOSITORY):$(GOTENBERG_VERSION)-$(AP
 
 ---
 
-> Where can I see the list of `Makefile` commands?
+> What commands are available?
 
-Run `make help` to display the available commands 💡
+Run `make help` to list them 💡
