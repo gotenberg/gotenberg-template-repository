@@ -2,8 +2,8 @@
 help: ## Show the help
 	@grep -hE '^[A-Za-z0-9_ \-]*?:.*##.*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-GOLANG_VERSION=1.26.0
-GOTENBERG_VERSION=8.31.0
+GOLANG_VERSION=1.26.2
+GOTENBERG_VERSION=8.32.0
 APP_NAME=app
 APP_VERSION=snapshot
 APP_AUTHOR=app-author
