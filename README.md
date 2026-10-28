@@ -1,17 +1,17 @@
 > GitHub template repository for building custom modules and Gotenberg Docker image variants.
-> 
+>
 > Built something cool? Open a PR to the [awesome list](https://github.com/gotenberg/awesome-gotenberg)! 🚀
 
 ## Quick Start
 
 Set these variables in the `Makefile`:
 
-* `APP_NAME`: your Gotenberg Docker image variant name.
-* `APP_VERSION`
-* `APP_AUTHOR`
-* `APP_REPOSITORY`
-* `DOCKER_REGISTRY`
-* `DOCKER_REPOSITORY`
+- `APP_NAME`: your Gotenberg Docker image variant name.
+- `APP_VERSION`
+- `APP_AUTHOR`
+- `APP_REPOSITORY`
+- `DOCKER_REGISTRY`
+- `DOCKER_REPOSITORY`
 
 Then build:
 
@@ -43,3 +43,10 @@ docker inspect $(DOCKER_REGISTRY)/$(DOCKER_REPOSITORY):$(GOTENBERG_VERSION)-$(AP
 > What commands are available?
 
 Run `make help` to list them 💡
+
+## Contributing
+
+- Contributing guide: [CONTRIBUTING.md](CONTRIBUTING.md)
+- Bug reports: [GitHub Issues](https://github.com/gotenberg/gotenberg-template-repository/issues)
+- Questions and feedback: [GitHub Discussions](https://github.com/gotenberg/gotenberg/discussions)
+- Security vulnerabilities: [SECURITY.md](SECURITY.md)
