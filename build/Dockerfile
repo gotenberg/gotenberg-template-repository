@@ -5,7 +5,7 @@ FROM golang:$GOLANG_VERSION AS builder
 
 ENV CGO_ENABLED=0
 
-# Define the working directory outside of $GOPATH (we're using go modules).
+# Define the working directory outside of $GOPATH (the build uses Go modules).
 WORKDIR /home
 
 # Install module dependencies.
@@ -41,7 +41,7 @@ LABEL org.opencontainers.image.title="Gotenberg $APP_NAME" \
 
 USER root
 
-# TODO: add your instructions.
+# TODO: add your instructions, such as installing the packages your modules need.
 
 # Copy the Gotenberg binary from the builder stage.
 COPY --from=builder /home/gotenberg /usr/bin/

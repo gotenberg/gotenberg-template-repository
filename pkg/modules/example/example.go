@@ -13,13 +13,13 @@ func init() {
 	gotenberg.MustRegisterModule(new(Example))
 }
 
-// Example is our module. It does nothing.
+// Example is a minimal module. It registers two flags and does nothing else.
 type Example struct {
 	strProp string
 	intProp int
 }
 
-// Descriptor returns an [Example]'s module descriptor.
+// Descriptor returns the module descriptor of [Example].
 func (ex *Example) Descriptor() gotenberg.ModuleDescriptor {
 	return gotenberg.ModuleDescriptor{
 		ID: "example",
@@ -43,7 +43,7 @@ func (ex *Example) Provision(ctx *gotenberg.Context) error {
 	return nil
 }
 
-// Validate validates the module properties.
+// Validate rejects the reserved property values.
 func (ex *Example) Validate() error {
 	var err error
 
@@ -58,6 +58,7 @@ func (ex *Example) Validate() error {
 	return err
 }
 
+// SystemMessages returns the messages Gotenberg logs at startup.
 func (ex *Example) SystemMessages() []string {
 	return []string{
 		"Hello world!",
