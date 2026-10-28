@@ -22,6 +22,22 @@ jobs:
           go-version-file: go.mod
 
       - name: Run linters
-        uses: golangci/golangci-lint-action@v9
+        run: make lint
+
+  lint-prettier:
+    name: Lint non-Golang codebase
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
         with:
-          version: v2.15.0
+          node-version-file: .node-version
+
+      - name: Install Dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Run linters
+        run: make lint-prettier
