@@ -23,7 +23,7 @@ ARG GOTENBERG_VERSION
 ARG APP_NAME
 ARG APP_VERSION
 
-RUN go build -o gotenberg -ldflags "-X 'github.com/gotenberg/gotenberg/v8/cmd.Version=$GOTENBERG_VERSION-$APP_NAME-$APP_VERSION'" cmd/app/main.go
+RUN go build -o gotenberg -ldflags "-X 'github.com/gotenberg/gotenberg/v9/cmd.Version=$GOTENBERG_VERSION-$APP_NAME-$APP_VERSION'" cmd/app/main.go
 
 FROM gotenberg/gotenberg:$GOTENBERG_VERSION
 

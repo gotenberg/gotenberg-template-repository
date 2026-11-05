@@ -3,10 +3,9 @@ package example
 import (
 	"errors"
 
+	"github.com/gotenberg/gotenberg/v9/pkg/gotenberg"
 	flag "github.com/spf13/pflag"
 	"go.uber.org/multierr"
-
-	"github.com/gotenberg/gotenberg/v8/pkg/gotenberg"
 )
 
 func init() {
@@ -58,17 +57,9 @@ func (ex *Example) Validate() error {
 	return err
 }
 
-// SystemMessages returns the messages Gotenberg logs at startup.
-func (ex *Example) SystemMessages() []string {
-	return []string{
-		"Hello world!",
-	}
-}
-
 // Interface guards.
 var (
-	_ gotenberg.Module       = (*Example)(nil)
-	_ gotenberg.Provisioner  = (*Example)(nil)
-	_ gotenberg.Validator    = (*Example)(nil)
-	_ gotenberg.SystemLogger = (*Example)(nil)
+	_ gotenberg.Module      = (*Example)(nil)
+	_ gotenberg.Provisioner = (*Example)(nil)
+	_ gotenberg.Validator   = (*Example)(nil)
 )
