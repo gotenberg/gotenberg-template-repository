@@ -5,7 +5,7 @@ A GitHub template repository for building custom Gotenberg variants. Keep it sma
 ## Toolchain
 
 - Module: `github.com/gotenberg/gotenberg-template-repository`
-- Go: 1.27.3
+- Go: 1.27.4
 - Docker
 - Node.js (see `.node-version`), for Prettier linting
 - golangci-lint: the Makefile runs golangci-lint at a pinned version through `go run`, never the copy on your `PATH`.
