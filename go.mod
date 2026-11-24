@@ -5,7 +5,7 @@ module github.com/gotenberg/gotenberg-template-repository
 go 1.27.4
 
 require (
-	github.com/gotenberg/gotenberg/v9 v9.9.3
+	github.com/gotenberg/gotenberg/v9 v9.10.0
 	github.com/spf13/pflag v1.1.0
 	go.uber.org/multierr v1.11.0
 )
@@ -55,7 +55,6 @@ require (
 	github.com/klauspost/pgzip v1.3.0 // indirect
 	github.com/labstack/echo/v5 v5.4.7 // indirect
 	github.com/labstack/gommon v0.5.0 // indirect
-	github.com/ledongthuc/pdf v0.0.0-20261020125853-5e46805f718e // indirect
 	github.com/lufia/plan9stats v0.0.0-20261101121723-be84dd9509a0 // indirect
 	github.com/mholt/archives v0.1.5 // indirect
 	github.com/microcosm-cc/bluemonday v1.0.27 // indirect
@@ -63,7 +62,6 @@ require (
 	github.com/minio/minlz v1.3.0 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/nwaples/rardecode/v2 v2.4.6 // indirect
-	github.com/orisano/pixelmatch v0.0.0-20261015095729-8d350b6cff2e // indirect
 	github.com/pandatix/go-abnf v0.5.5 // indirect
 	github.com/pierrec/lz4/v4 v4.1.34 // indirect
 	github.com/power-devops/perfstat v0.0.0-20260916203055-22a1a467d9f0 // indirect
