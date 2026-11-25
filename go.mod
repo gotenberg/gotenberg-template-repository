@@ -5,7 +5,7 @@ module github.com/gotenberg/gotenberg-template-repository
 go 1.27.4
 
 require (
-	github.com/gotenberg/gotenberg/v9 v9.10.0
+	github.com/gotenberg/gotenberg/v9 v9.10.1
 	github.com/spf13/pflag v1.1.0
 	go.uber.org/multierr v1.11.0
 )
@@ -45,7 +45,7 @@ require (
 	github.com/google/pprof v0.0.0-20261118010117-084b33a85f63 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/gorilla/css v1.0.1 // indirect
-	github.com/gotenberg/litho v0.0.19 // indirect
+	github.com/gotenberg/litho v0.0.20 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.34.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
 	github.com/hashicorp/go-retryablehttp v0.7.8 // indirect
